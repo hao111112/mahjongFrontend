@@ -1,0 +1,176 @@
+
+.character-info {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+.audio {
+    position: absolute;
+    right: 0.7rem;
+    bottom: 0.35rem;
+    width: 0.3rem;
+    height: 0.3rem;
+    background: url(../images/box5/sound.png) no-repeat center;
+    background-size: 100%;
+    z-index: 5;
+}
+
+.audio:hover {
+    cursor: pointer;
+}
+.characterName{
+    position: absolute;
+    left: 0.8rem;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 3rem;
+    height: 0.85rem;
+}
+.character-en-name{
+    flex: 1;
+    font-size: 0.25rem;
+   color: white;
+}
+.character-name{
+    flex: 1;
+    font-size: 0.4rem;
+    color: white;
+}
+.roleShadow{
+    position: absolute;
+    top: 0;
+    height: 5rem;
+    width: 10rem;
+    background: url(../images/draft/roleShadow.png) no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.roleShadowRectangle{
+    position: absolute;
+    top: 0;
+    right:  0;
+    height: 5rem;
+    width: 2rem;
+    background: url(../images/draft/roleShadowRectangle.png) no-repeat;
+    background-size: cover;
+}
+.roleTitle{
+    position: absolute;
+    bottom: 1.9rem;
+    right: 0.3rem;
+    color: white;
+    font-size: 0.35rem;
+    z-index: 4;
+}
+.avatarBox {
+    position: absolute;
+    bottom: 0.1rem;
+    left: 0.6rem;
+    width: 4rem;
+    height: 2.5rem;
+    z-index: 4;
+}
+
+.avatarBox .avatar {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.75rem;
+    transition: transform 0.2s ease; /* 添加过渡效果 */
+    opacity: 0.7;
+}
+
+.avatarBox .avatar:hover {
+    cursor: pointer;
+}
+
+.avatarBox .avatar.selected {
+    transform: scale(1.25); /* 选中时放大 */
+    border-radius: 5px; /* 边框圆角 */
+    opacity: 1;
+}
+
+.avatarBox .avatar:nth-child(1) {
+    top: 0.8rem;
+    left: 0.6rem;
+    background: url(../images/draft/avatar6.png) no-repeat center;
+    background-size: 100%;
+}
+
+.avatarBox .avatar:nth-child(2) {
+    top: 0.8rem;
+    left: 1.45rem;
+    background: url(../images/draft/avatar2.png) no-repeat center;
+    background-size: 100%;
+}
+
+.avatarBox .avatar:nth-child(3) {
+    top: 0.8rem;
+    left: 2.3rem;
+    background: url(../images/draft/avatar3.png) no-repeat center;
+    background-size: 100%;
+}
+
+.avatarBox .avatar:nth-child(4) {
+    top: 1.7rem;
+    left: 0.6rem;
+    background: url(../images/draft/avatar4.png) no-repeat center;
+    background-size: 100%;
+}
+
+.avatarBox .avatar:nth-child(5) {
+    top: 1.7rem;
+    left: 2.2rem;
+    background: url(../images/draft/avatar5.png) no-repeat center;
+    background-size: 100%;
+}
+
+.avatarBox .avatar:nth-child(6) {
+    top: 1.7rem;
+    left: 1.4rem;
+    background: url(../images/draft/avatar6.png) no-repeat center;
+    background-size: 100%;
+}
+
+#character-intro{
+    position: absolute;
+    bottom: 0.1rem;
+    right: 0.5rem;
+    height: 1.7rem;
+    width: 3rem;
+    padding: 0.2rem;
+    font-size: 0.12rem;
+    box-sizing: border-box;
+    color: white;
+    background: url(../images/draft/roleInfoBox.png) no-repeat;
+    background-size: 100%;
+    z-index: 4;
+}
+.character-image {
+    position: absolute;
+    width: 4rem; /* 适应容器宽度 */
+    height: 5rem; /* 适应容器高度 */
+    top: 0;
+    right: 2rem;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 2;
+    background-size: cover; /* 背景图像等比例缩放 */
+    background-position: center; /* 背景图像居中 */
+    background-image: url(../images/draft/role1.png);
+}
+.avatar-buttons{
+    position: absolute;
+    z-index: 8;
+}
+
+.character-image.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
