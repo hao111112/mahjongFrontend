@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
   const options = {
     key: fs.readFileSync('./key/mahjong.key'),
     cert: fs.readFileSync('./key/mahjong.crt'),
+    ca: fs.readFileSync('./key/mahjong.ca-bundle')
   };
   https.createServer(options, app).listen(443,()=>{console.log('Server is running on https://localhost:443');})
  
