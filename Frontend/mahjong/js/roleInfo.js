@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
             if (entry.isIntersecting) {
                 // 当元素进入视口时调用函数
                 changeCharacter(
-                    'Yume Miya Meri',
-                    '夢宮明里',
-                    './images/draft/role1.png',
+                    'Little Fox Chiyo',
+                    '小狸千代',
+                    './images/roleInfo/role1.png',
+                    './images/roleInfo/roleShadow1.png',
                     '永遠宅在家的電競高手，平常除了貓貓之外沒有什麼特別喜歡的東西，無力氣、電波系，喜歡麻將。體力值為零。 但在pvp遊戲中勝負欲極強。因為滑鼠、鍵盤、手機同時壞掉了，不得不出外的時候偶然遇上了主角，受到主角的幫助後，加了好友一起打麻將。','./audio/1.wav',
                     1
                 );
@@ -25,12 +26,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 let selectedAvatarIndex = null; // 用于跟踪当前选中的头像
 
-function changeCharacter(name, nickname, imgSrc, intro, audioSrc, index) {
+function changeCharacter(name, nickname, imgSrc, backImg,intro, audioSrc, index) {
     const characterInfo = document.getElementById('character-info');
     const characterENName = document.getElementById('character-en-name');
     const characterName = document.getElementById('character-name');
     const characterIntro = document.getElementById('character-intro');
     const characterImage = document.getElementById('character-image');
+    const roleShadow = document.getElementById('roleShadow');
     const characterAudio = document.getElementById('character-audio'); // 获取音频元素
     // 清除之前选中的头像样式
     if (selectedAvatarIndex !== null) {
@@ -60,6 +62,7 @@ function changeCharacter(name, nickname, imgSrc, intro, audioSrc, index) {
         characterName.textContent = nickname;
         characterIntro.textContent = intro;
         characterImage.style.backgroundImage = `url('${imgSrc}')`;
+        roleShadow.style.backgroundImage = `url('${backImg}')`;
  // 更新音频源
  characterAudio.src = audioSrc;
 

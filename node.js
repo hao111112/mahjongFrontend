@@ -1,22 +1,23 @@
 const express = require('express');
 const cors = require('cors');
-const mysql = require('mysql');
-const app = express();
-const path = require('path');
 const fs = require('fs');
 const https = require('https');
-app.use(cors());
-// 使用 express.json() 中间件解析 JSON 请求体
-app.use(express.json());
+const app = express();
 
-app.use(express.static(path.join(__dirname, './Frontend')));
+app.use(cors());
+app.use(express.static('./'));
+
 app.get('/', (req, res) => {
-    res.redirect('/mahjong/index.html');
-  });
-  const options = {
+    
+    res.redirect('/Frontend/mahjong/index.html');
+});
+
+const options = {
     key: fs.readFileSync('./key/mahjong.key'),
     cert: fs.readFileSync('./key/mahjong.crt'),
-    ca: fs.readFileSync('./key/mahjong.ca-bundle')
-  };
-  https.createServer(options, app).listen(443,()=>{console.log('Server is running on https://localhost:443');})
- 
+    ca: fs.readFileSync('./key/mahjong.ca-bundle') // 如果需要
+};
+
+https.createServer(options, app).listen(8080, () => {
+    console.log('Server is running on https://localhost:8080');
+});

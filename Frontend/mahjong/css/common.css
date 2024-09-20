@@ -1,8 +1,16 @@
 *{
     margin: 0;
  }
+ @font-face {
+    font-family: 'MyCustomFont';
+    src: url('../font/font.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
  html {
+    font-family: 'MyCustomFont'; /* 使用自定义字体 */
     scroll-behavior: smooth; /* 启用平滑滚动 */
+    cursor: url('../images/mouse/mouse.png'), auto; /* 自定义鼠标样式 */
 }
 em,
 i {

@@ -4,12 +4,13 @@
     position: relative;
     overflow: hidden;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    background-size: cover;
 }
 .loading-container img {
     position: absolute;
-    width: 2rem;
-    height: 2rem;
+    width: 4rem;
+    height: 2.4rem;
     top: 1rem;
     left: 50%;
     transform: translate(-50%, 0) rotateY(0); /* 先平移再旋转 */

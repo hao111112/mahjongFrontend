@@ -9,22 +9,23 @@
     min-height: 4rem; /* 最小高度 */
     overflow: auto; /* 超出时出现滚动条 */
 }
- .nav{
-    position:fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    height: 0.5rem;
-    width: 10rem;
-    background-color: #edf5fecb; /* 背景色 */
-    box-shadow: 0 0 2px 0;
-    font-size: 0.15rem;
-    z-index: 998;
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 0.5rem;
+  width: 10rem;
+  background-color: rgba(237, 245, 254, 0.632); /* 使用 rgba 设置透明度 */
+  backdrop-filter: blur(2px); /* 添加模糊效果 */
+  box-shadow: 0 0 2px 0;
+  font-size: 0.15rem;
+  z-index: 998;
 }
 .nav .logo{
     height: 100%;
     width: 1rem;
-    margin: 0 0.5rem;
+    margin: 0 0.7rem;
    background: url(../images/box1/MainTitle.png) no-repeat center;
    background-size: 100%;
 }
@@ -39,12 +40,18 @@
     color: #5B89BB;
     font-size: 0.1rem;
  }
+ .nav .guidebox a:nth-child(3){
+  margin-left: 0.15rem;
+}
+.nav .guidebox a:nth-child(4){
+  margin-left: 0.15rem;
+}
 .nav .linkbox {
     display: flex;
     width:1.5rem;
     height: 100%;
     margin-right: 0.25rem;
-    margin-left: 0.4rem;
+    margin-left: 0.8rem;
  }
  .nav .linkbox a{
     flex: 1;
@@ -78,7 +85,7 @@
  .box1 .ViceTitle1{
     position: absolute;
     top: 3.2rem;
-    left: 1.5rem;
+    left: 4rem;
     width: 3.5rem;
     height: 0.7rem;
     background: url(../images/box1/ViceTitle1.png) no-repeat center;
@@ -87,7 +94,7 @@
  .box1 .ViceTitle2{
     position: absolute;
     bottom: 0.5rem;
-    right: 1%;
+    right: 1.7rem;
     width: 4rem;
     height: 1.5rem;
     background: url(../images/box1/ViceTitle2.png) no-repeat center;
@@ -149,16 +156,31 @@
     background: url(../images/box1/Mouse.png) no-repeat center;
     background-size: 150%;
     animation: mousePopup 4s linear infinite; /* 旋转动画 */
+  } 
+  .box1 .button{
+    position: absolute;
+    bottom: 0.4rem;
+    left: 1rem;
+    width: 3rem;
+    height: 1rem;
+    background: url(../images/box1/Button.png) no-repeat center;
+    background-size: 100%;
+  }
+  .box1 .button:hover{
+  cursor: pointer;
   }
   @keyframes mousePopup {
     0% {
         transform: translate(-50%, 0%) ;
+        opacity: 0.2;
     }
     50% {
       transform: translate(-50%, -10%) ;
+      opacity: 1;
   }
     100% {
         transform: translate(-50%, 0%);
+        opacity: 0.2;
     }
 }
 @keyframes slideInLeft {
@@ -210,19 +232,21 @@
 }
   .box2{
     position: relative;
-    height: 4.8rem;
+    height: 5.3rem;
     width: 10rem;
-    background-color: #FFFF;
+    background:url(../images/box2/BG.png) no-repeat;
     background-size: 100%;
   }
   .box2 .cover{
     position: absolute;
-    top: 1.45rem;
+    top: 1.63rem;
     left: 50%;
-    transform: translateX(-50%);
-    height:2.5rem;
+    transform: translateX(-51%);
+    height:2.6rem;
     width: 5rem;
-    background-color: #1d1e254d;
+    /* background-color: #1d1e254d; */
+    background: url(../images/box2/cover.png) no-repeat;
+    background-size: 100%;
     z-index: 1;
   }
   .box2 .logo{
@@ -347,7 +371,7 @@
 /* 应用动画到 appointContent */
 .box2 .appointContent {
     position: absolute;
-    top: 1.3rem;
+    top: 1.6rem;
     left: 50%;
     width: 5rem;
     height: 2.8rem;
@@ -612,7 +636,7 @@ background-size: 50%;
 }
  .box5{
   position: relative;
-  height: 4.8rem;
+  height: 5rem;
   width: 10rem;
   background: url(../images/box5/BG.png) no-repeat;
   background-size: 100%;

@@ -27,10 +27,10 @@ const loadingInterval = setInterval(() => {
         const randomIncrement = Math.floor(Math.random() * 10) + 1; // 随机增加1到5
         progress = Math.min(progress + randomIncrement, 100);
         progressBar.style.width = progress + '%';
-        loadingText.textContent = `加载中... ${progress}%`;
+        loadingText.textContent = `Loading... ${progress}%`;
     } else {
         clearInterval(loadingInterval);
-        loadingText.textContent = '加载完成!';
+        loadingText.textContent = 'Comeleted!';
         setTimeout(() => {
             loadingContainer.style.display = 'none'; // 关闭加载弹窗
             content.style.display = 'block'; // 显示内容
